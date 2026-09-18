@@ -1,0 +1,44 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "mercury",
+  "version": "1.0.0",
+  "description": "Read balances, transactions, statements, and cards.",
+  "author": {
+    "name": "Cursor",
+    "email": "plugins@cursor.com"
+  },
+  "homepage": "https://docs.mercury.com/docs/what-is-mercury-mcp",
+  "repository": "https://github.com/cursor/plugins",
+  "license": "MIT",
+  "keywords": [
+    "mercury",
+    "banking",
+    "finance",
+    "transactions",
+    "statements",
+    "mcp"
+  ],
+  "extensions": {
+    "com.cursor": {
+      "displayName": "Mercury",
+      "logo": "assets/logo.png",
+      "category": "integrations",
+      "tags": [
+        "mercury",
+        "finance",
+        "mcp",
+        "banking"
+      ],
+      "minClientVersions": {
+        "cursor": "3.13.0"
+      }
+    },
+    "moe.akr.aghub": {
+      "category": "Integrations",
+      "source": {
+        "repo": "https://github.com/cursor/plugins",
+        "path": "third_party/mercury"
+      }
+    }
+  }
+}

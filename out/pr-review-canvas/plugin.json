@@ -1,0 +1,41 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "pr-review-canvas",
+  "version": "0.1.0",
+  "description": "Render PR diffs as review canvases grouped by importance.",
+  "author": {
+    "name": "Cursor",
+    "email": "plugins@cursor.com"
+  },
+  "homepage": "https://github.com/cursor/plugins/tree/main/pr-review-canvas",
+  "repository": "https://github.com/cursor/plugins",
+  "license": "MIT",
+  "keywords": [
+    "cursor-plugin",
+    "canvas",
+    "pr-review",
+    "code-review",
+    "diff",
+    "pull-request"
+  ],
+  "extensions": {
+    "com.cursor": {
+      "displayName": "PR Review Canvas",
+      "logo": "assets/avatar.png",
+      "category": "developer-tools",
+      "tags": [
+        "canvas",
+        "code-review",
+        "pull-request",
+        "workflow"
+      ]
+    },
+    "moe.akr.aghub": {
+      "category": "Developer tools",
+      "source": {
+        "repo": "https://github.com/cursor/plugins",
+        "path": "pr-review-canvas"
+      }
+    }
+  }
+}

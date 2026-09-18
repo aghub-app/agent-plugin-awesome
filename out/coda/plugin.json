@@ -1,0 +1,44 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "coda",
+  "version": "1.0.0",
+  "description": "Search docs, read pages, and update tables.",
+  "author": {
+    "name": "Cursor",
+    "email": "plugins@cursor.com"
+  },
+  "homepage": "https://help.superhuman.com/hc/en-us/articles/46210076980365-Connect-to-the-Coda-MCP",
+  "repository": "https://github.com/cursor/plugins",
+  "license": "MIT",
+  "keywords": [
+    "coda",
+    "superhuman",
+    "docs",
+    "tables",
+    "knowledge",
+    "mcp"
+  ],
+  "extensions": {
+    "com.cursor": {
+      "displayName": "Coda",
+      "logo": "assets/logo.png",
+      "category": "integrations",
+      "tags": [
+        "coda",
+        "docs",
+        "mcp",
+        "knowledge"
+      ],
+      "minClientVersions": {
+        "cursor": "3.13.0"
+      }
+    },
+    "moe.akr.aghub": {
+      "category": "Integrations",
+      "source": {
+        "repo": "https://github.com/cursor/plugins",
+        "path": "third_party/coda"
+      }
+    }
+  }
+}

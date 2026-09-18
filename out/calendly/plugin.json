@@ -1,0 +1,44 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "calendly",
+  "version": "1.0.0",
+  "description": "Check availability and book, cancel, or reschedule.",
+  "author": {
+    "name": "Cursor",
+    "email": "plugins@cursor.com"
+  },
+  "homepage": "https://developer.calendly.com/calendly-mcp-server",
+  "repository": "https://github.com/cursor/plugins",
+  "license": "MIT",
+  "keywords": [
+    "calendly",
+    "scheduling",
+    "calendar",
+    "meetings",
+    "availability",
+    "mcp"
+  ],
+  "extensions": {
+    "com.cursor": {
+      "displayName": "Calendly",
+      "logo": "assets/logo.png",
+      "category": "integrations",
+      "tags": [
+        "calendly",
+        "scheduling",
+        "mcp",
+        "calendar"
+      ],
+      "minClientVersions": {
+        "cursor": "3.13.0"
+      }
+    },
+    "moe.akr.aghub": {
+      "category": "Integrations",
+      "source": {
+        "repo": "https://github.com/cursor/plugins",
+        "path": "third_party/calendly"
+      }
+    }
+  }
+}

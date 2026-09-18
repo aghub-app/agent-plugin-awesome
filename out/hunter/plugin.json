@@ -1,0 +1,69 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "hunter",
+  "version": "1.0.0",
+  "description": "Find and verify emails, discover companies, and save leads.",
+  "author": {
+    "name": "Cursor",
+    "email": "plugins@cursor.com"
+  },
+  "homepage": "https://hunter.io/agents.md",
+  "repository": "https://github.com/cursor/plugins",
+  "license": "MIT",
+  "keywords": [
+    "hunter",
+    "email finder",
+    "email verifier",
+    "domain search",
+    "prospecting",
+    "enrichment",
+    "leads",
+    "gtm",
+    "sales",
+    "mcp"
+  ],
+  "extensions": {
+    "com.cursor": {
+      "displayName": "Hunter",
+      "logo": "assets/logo.png",
+      "category": "integrations",
+      "tags": [
+        "hunter",
+        "sales",
+        "prospecting",
+        "enrichment",
+        "mcp"
+      ],
+      "minClientVersions": {
+        "cursor": "3.13.0"
+      },
+      "variables": {
+        "type": "object",
+        "properties": {
+          "HUNTER_API_KEY": {
+            "type": "string",
+            "title": "Hunter API key",
+            "description": "API key from https://hunter.io/api-keys. The Free plan works."
+          }
+        },
+        "required": [
+          "HUNTER_API_KEY"
+        ]
+      },
+      "mcpServers": {
+        "hunter": {
+          "headers": {
+            "X-API-Key": "${HUNTER_API_KEY}"
+          }
+        }
+      }
+    },
+    "moe.akr.aghub": {
+      "category": "Integrations",
+      "source": {
+        "repo": "https://github.com/cursor/plugins",
+        "path": "third_party/hunter"
+      }
+    }
+  }
+}

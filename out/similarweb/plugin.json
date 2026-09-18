@@ -1,0 +1,64 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "similarweb",
+  "version": "1.0.0",
+  "description": "Analyze website traffic, audiences, and competitors.",
+  "author": {
+    "name": "Cursor",
+    "email": "plugins@cursor.com"
+  },
+  "homepage": "https://docs.similarweb.com/api-v5/similarweb-mcp",
+  "repository": "https://github.com/cursor/plugins",
+  "license": "MIT",
+  "keywords": [
+    "similarweb",
+    "traffic",
+    "analytics",
+    "competitive-intelligence",
+    "audience",
+    "mcp"
+  ],
+  "extensions": {
+    "com.cursor": {
+      "displayName": "Similarweb",
+      "logo": "assets/logo.png",
+      "category": "integrations",
+      "tags": [
+        "similarweb",
+        "analytics",
+        "mcp",
+        "research"
+      ],
+      "minClientVersions": {
+        "cursor": "3.13.0"
+      },
+      "variables": {
+        "type": "object",
+        "properties": {
+          "SIMILARWEB_API_KEY": {
+            "type": "string",
+            "title": "Similarweb API key",
+            "description": "REST API key from Similarweb under Account Settings → Data Tools → REST API."
+          }
+        },
+        "required": [
+          "SIMILARWEB_API_KEY"
+        ]
+      },
+      "mcpServers": {
+        "similarweb": {
+          "headers": {
+            "api-key": "${SIMILARWEB_API_KEY}"
+          }
+        }
+      }
+    },
+    "moe.akr.aghub": {
+      "category": "Integrations",
+      "source": {
+        "repo": "https://github.com/cursor/plugins",
+        "path": "third_party/similarweb"
+      }
+    }
+  }
+}

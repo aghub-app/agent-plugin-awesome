@@ -1,0 +1,69 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "hubspot",
+  "version": "1.0.0",
+  "description": "Search and update contacts, companies, deals, and tickets.",
+  "author": {
+    "name": "Cursor",
+    "email": "plugins@cursor.com"
+  },
+  "homepage": "https://developers.hubspot.com/docs/apps/developer-platform/build-apps/integrate-with-the-remote-hubspot-mcp-server",
+  "repository": "https://github.com/cursor/plugins",
+  "license": "MIT",
+  "keywords": [
+    "hubspot",
+    "crm",
+    "mcp",
+    "sales",
+    "marketing",
+    "contacts",
+    "deals"
+  ],
+  "extensions": {
+    "com.cursor": {
+      "displayName": "HubSpot",
+      "logo": "assets/logo.png",
+      "category": "integrations",
+      "tags": [
+        "mcp",
+        "crm",
+        "sales",
+        "hubspot"
+      ],
+      "variables": {
+        "type": "object",
+        "properties": {
+          "CLIENT_ID": {
+            "type": "string",
+            "title": "HubSpot Client ID",
+            "description": "OAuth Client ID from Development → MCP Auth Apps → your app."
+          },
+          "CLIENT_SECRET": {
+            "type": "string",
+            "title": "HubSpot Client Secret",
+            "description": "OAuth Client Secret from the same HubSpot MCP auth app."
+          }
+        },
+        "required": [
+          "CLIENT_ID",
+          "CLIENT_SECRET"
+        ]
+      },
+      "mcpServers": {
+        "hubspot": {
+          "auth": {
+            "CLIENT_ID": "${CLIENT_ID}",
+            "CLIENT_SECRET": "${CLIENT_SECRET}"
+          }
+        }
+      }
+    },
+    "moe.akr.aghub": {
+      "category": "Integrations",
+      "source": {
+        "repo": "https://github.com/cursor/plugins",
+        "path": "third_party/hubspot"
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "workable",
+  "version": "1.0.0",
+  "description": "Search candidates, move pipelines, and manage HR records.",
+  "author": {
+    "name": "Cursor",
+    "email": "plugins@cursor.com"
+  },
+  "homepage": "https://workable.readme.io/reference/workable-mcp-server",
+  "repository": "https://github.com/cursor/plugins",
+  "license": "MIT",
+  "keywords": [
+    "workable",
+    "ats",
+    "recruiting",
+    "candidates",
+    "hris",
+    "hiring",
+    "mcp"
+  ],
+  "extensions": {
+    "com.cursor": {
+      "displayName": "Workable",
+      "logo": "assets/logo.png",
+      "category": "integrations",
+      "tags": [
+        "workable",
+        "recruiting",
+        "mcp",
+        "ats"
+      ],
+      "minClientVersions": {
+        "cursor": "3.13.0"
+      }
+    },
+    "moe.akr.aghub": {
+      "category": "Integrations",
+      "source": {
+        "repo": "https://github.com/cursor/plugins",
+        "path": "third_party/workable"
+      }
+    }
+  }
+}

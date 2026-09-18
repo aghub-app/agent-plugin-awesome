@@ -1,0 +1,44 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "google-drive",
+  "version": "1.0.0",
+  "description": "Search, read, create, and share files.",
+  "author": {
+    "name": "Cursor",
+    "email": "plugins@cursor.com"
+  },
+  "homepage": "https://github.com/cursor/plugins/tree/main/third_party/google-drive",
+  "repository": "https://github.com/cursor/plugins",
+  "license": "MIT",
+  "keywords": [
+    "google-drive",
+    "drive",
+    "google",
+    "mcp",
+    "files",
+    "workspace"
+  ],
+  "extensions": {
+    "com.cursor": {
+      "displayName": "Google Drive",
+      "logo": "assets/logo.svg",
+      "category": "productivity",
+      "tags": [
+        "drive",
+        "files",
+        "mcp",
+        "google-workspace"
+      ],
+      "minClientVersions": {
+        "cursor": "3.13.0"
+      }
+    },
+    "moe.akr.aghub": {
+      "category": "Productivity",
+      "source": {
+        "repo": "https://github.com/cursor/plugins",
+        "path": "third_party/google-drive"
+      }
+    }
+  }
+}

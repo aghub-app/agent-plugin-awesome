@@ -1,0 +1,44 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "outlook",
+  "version": "1.0.0",
+  "description": "Search, read, and send Microsoft Outlook email, and look up contacts.",
+  "author": {
+    "name": "Cursor",
+    "email": "plugins@cursor.com"
+  },
+  "homepage": "https://github.com/cursor/plugins/tree/main/third_party/outlook",
+  "repository": "https://github.com/cursor/plugins",
+  "license": "MIT",
+  "keywords": [
+    "outlook",
+    "email",
+    "microsoft",
+    "mcp",
+    "contacts"
+  ],
+  "extensions": {
+    "com.cursor": {
+      "displayName": "Outlook",
+      "logo": "assets/logo.svg",
+      "category": "productivity",
+      "tags": [
+        "outlook",
+        "email",
+        "mcp",
+        "microsoft-365"
+      ],
+      "minClientVersions": {
+        "cursor": "3.19.0",
+        "sand": "0.30.0"
+      }
+    },
+    "moe.akr.aghub": {
+      "category": "Productivity",
+      "source": {
+        "repo": "https://github.com/cursor/plugins",
+        "path": "third_party/outlook"
+      }
+    }
+  }
+}

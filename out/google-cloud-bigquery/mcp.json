@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "google-cloud-bigquery": {
+      "type": "streamable-http",
+      "url": "https://bigquery.googleapis.com/mcp"
+    }
+  }
+}

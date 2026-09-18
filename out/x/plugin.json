@@ -1,0 +1,75 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "x",
+  "version": "2.5.0",
+  "description": "Search posts, read timelines, pull trends, manage bookmarks, and access X Chat.",
+  "author": {
+    "name": "Cursor",
+    "email": "plugins@cursor.com"
+  },
+  "homepage": "https://docs.x.com/tools/mcp",
+  "repository": "https://github.com/cursor/plugins",
+  "license": "MIT",
+  "keywords": [
+    "x",
+    "twitter",
+    "posts",
+    "search",
+    "trends",
+    "news",
+    "lists",
+    "bookmarks",
+    "chat",
+    "social",
+    "mcp"
+  ],
+  "extensions": {
+    "com.cursor": {
+      "displayName": "X",
+      "logo": "assets/logo.svg",
+      "category": "integrations",
+      "tags": [
+        "x",
+        "social",
+        "search",
+        "mcp"
+      ],
+      "minClientVersions": {
+        "cursor": "3.13.0"
+      },
+      "mcpServers": {
+        "x": {
+          "auth": {
+            "CLIENT_ID": "NGdZYmo4VVp2T1BnRG55NlExOGQ6MTpjaQ",
+            "scopes": [
+              "tweet.read",
+              "users.read",
+              "follows.read",
+              "space.read",
+              "mute.read",
+              "like.read",
+              "list.read",
+              "list.write",
+              "block.read",
+              "block.write",
+              "bookmark.read",
+              "bookmark.write",
+              "dm.read",
+              "dm.write",
+              "developer.billing.write",
+              "developer.write",
+              "offline.access"
+            ]
+          }
+        }
+      }
+    },
+    "moe.akr.aghub": {
+      "category": "Integrations",
+      "source": {
+        "repo": "https://github.com/cursor/plugins",
+        "path": "third_party/x"
+      }
+    }
+  }
+}

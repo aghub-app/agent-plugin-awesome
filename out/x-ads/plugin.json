@@ -1,0 +1,59 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "x-ads",
+  "version": "1.0.0",
+  "description": "Manage ad campaigns, create ads, track conversions, and pull performance stats.",
+  "author": {
+    "name": "Cursor",
+    "email": "plugins@cursor.com"
+  },
+  "homepage": "https://docs.x.com/x-ads-api/introduction",
+  "repository": "https://github.com/cursor/plugins",
+  "license": "MIT",
+  "keywords": [
+    "x",
+    "twitter",
+    "ads",
+    "advertising",
+    "campaigns",
+    "conversions",
+    "analytics",
+    "mcp"
+  ],
+  "extensions": {
+    "com.cursor": {
+      "displayName": "X Ads",
+      "logo": "assets/logo.png",
+      "category": "integrations",
+      "tags": [
+        "x",
+        "ads",
+        "advertising",
+        "mcp"
+      ],
+      "minClientVersions": {
+        "cursor": "3.13.0"
+      },
+      "mcpServers": {
+        "x-ads": {
+          "auth": {
+            "CLIENT_ID": "NGdZYmo4VVp2T1BnRG55NlExOGQ6MTpjaQ",
+            "scopes": [
+              "ads.read",
+              "ads.write",
+              "media.write",
+              "offline.access"
+            ]
+          }
+        }
+      }
+    },
+    "moe.akr.aghub": {
+      "category": "Integrations",
+      "source": {
+        "repo": "https://github.com/cursor/plugins",
+        "path": "third_party/x-ads"
+      }
+    }
+  }
+}
