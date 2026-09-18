@@ -1,0 +1,38 @@
+{
+  "name": "agent-plugin-awesome",
+  "version": "0.1.0",
+  "private": true,
+  "description": "An awesome MCP (Model Context Protocol) agent plugin exposing a set of handy tools over stdio.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "packageManager": "npm@10.9.7",
+  "bin": {
+    "agent-plugin-awesome": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js",
+    "demo": "tsx scripts/demo-client.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.30.0",
+    "zod": "4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.1",
+    "eslint": "10.10.0",
+    "tsx": "4.23.13",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.70.0",
+    "vitest": "5.0.1"
+  }
+}

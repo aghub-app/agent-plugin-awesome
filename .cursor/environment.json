@@ -1,0 +1,4 @@
+{
+  "name": "agent-plugin-awesome",
+  "install": "npm ci && npm run build"
+}
