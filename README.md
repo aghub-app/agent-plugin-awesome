@@ -12,7 +12,7 @@ bun install
 bun run convert
 ```
 
-默认读取 `vendor/cursor-plugins`，写出到 `out/<plugin-name>/`。
+默认读取 `vendor/cursor-plugins`，写出到 `out/<plugin-name>/`，并在 `out/all.json` 生成插件元信息索引。
 
 ```sh
 bun run convert -- --source vendor/cursor-plugins --out out

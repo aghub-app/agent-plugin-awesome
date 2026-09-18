@@ -47,7 +47,8 @@ for (const failure of failures) {
 
 console.log(
 	`\nconverted ${converted.length} plugin(s) → ${out}` +
-		(failures.length > 0 ? `, ${failures.length} failed` : ""),
+		(failures.length > 0 ? `, ${failures.length} failed` : "") +
+		`\nwrote ${out}/all.json`,
 );
 
 if (failures.length > 0) {

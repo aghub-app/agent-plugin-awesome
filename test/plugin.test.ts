@@ -145,6 +145,34 @@ test("convertAll writes every discovered plugin and reports a missing source", (
 			},
 		},
 	});
+	expect(readJson(join(root, "out", "all.json"))).toEqual({
+		plugins: [
+			{
+				name: "one",
+				path: "one",
+				description: "one",
+				category: "Utilities",
+				source: {
+					repo: CURSOR_PLUGINS_REPO,
+					path: "one",
+				},
+				skills: [],
+				mcpServers: [],
+			},
+			{
+				name: "two",
+				path: "two",
+				description: "two",
+				category: "Integrations",
+				source: {
+					repo: CURSOR_PLUGINS_REPO,
+					path: "nested/two",
+				},
+				skills: [],
+				mcpServers: [],
+			},
+		],
+	});
 
 	expect(() => convertAll(join(root, "missing"), join(root, "out"))).toThrow(
 		/submodule/,

@@ -13,6 +13,7 @@ import {
 	CURSOR_PLUGINS_REPO,
 	pluginSourcePath,
 } from "./aghub.ts";
+import { writePluginIndex } from "./catalog.ts";
 import { readJsonFile, writeJsonFile } from "./io.ts";
 import {
 	attachExtensions,
@@ -89,6 +90,7 @@ export function convertAll(
 		}
 	}
 
+	writePluginIndex(outRoot, converted);
 	return { converted, failures };
 }
 
