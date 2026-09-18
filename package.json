@@ -1,0 +1,17 @@
+{
+	"name": "agent-plugin-awesome",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"convert": "bun src/cli.ts",
+		"check": "biome check src test",
+		"format": "biome check --write src test",
+		"typecheck": "tsc --noEmit",
+		"test": "bun test"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.5.14",
+		"@types/bun": "latest",
+		"typescript": "7.0.2"
+	}
+}
